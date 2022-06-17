@@ -142,9 +142,10 @@ def main(
             raise SystemExit(1)
 
         if fm.username == 'root':
-            fm.settings.preview_files = False
-            fm.settings.use_preview_script = False
-            LOG.info("Running as root, disabling the file previews.")
+            # fm.settings.preview_files = False
+            # fm.settings.use_preview_script = False
+            # LOG.info("Running as root, disabling the file previews.")
+            LOG.info("Running as root with file preview enabled.")
         if not args.debug:
             from ranger.ext import curses_interrupt_handler
             curses_interrupt_handler.install_interrupt_handler()
